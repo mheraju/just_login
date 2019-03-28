@@ -1,0 +1,6 @@
+<h1>JUST LOGIN</h1>
+<% if user_signed_in? %>
+  <button> <%= link_to('Logout', destroy_user_session_path, method: :delete) %>   </button>
+<% else %>
+  <button><%= link_to('Login', new_user_session_path)  %> </button>
+<% end %>
